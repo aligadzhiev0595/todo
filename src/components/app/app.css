@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app{
+    background:url(./app-bg.jpg) center/contain repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app-container{
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #999999;
+    border-radius: 8px;
+    padding: 20px;
+    
+}
+
+.title{
+    text-align: center;
+}
+.statusBar{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.statusbtns{
+    display: inline-block;
+}
+
+.search{
+    padding-left: 5px;
+    outline: none;
+}
+
+.search.add{
+    width: 200px;
+}
+
+.ul{
+    margin-top: 20px;
+}
+.li{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    border: 1px solid rgb(69, 176, 248);
+    outline: none;
+    color: rgb(69, 176, 248);
+}
+
+
+.btn.btns{
+    border: 1px solid rgb(2, 223, 2);
+    color: rgb(2, 223, 2);
+}
+.btn.btns-1{
+    border: 1px solid rgb(255, 252, 64);
+    color: rgb(255, 252, 64);
+}
+.btn.btns-2{
+    border: 1px solid rgb(255, 0, 0);
+    color: rgb(255, 0, 0);
+}
+.btn.btns-3{
+    border: 1px solid rgb(128, 125, 125);
+    color: rgb(128, 125, 125);
+}
+.btns-4{
+    margin-left: 5px;
+    border: none;
+    color: rgb(11, 118, 241) ;
+    background: none;
+}
+.btns-4:hover{
+    color: rgb(11, 118, 241) ;
+
+}
+
+.form{
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo-name.done{
+text-decoration: line-through;
+}
+.todo-name.important{
+    color: yellow;
+}
+.edit-form{
+    display: none;
+}
+.edit-form.active{
+    display: block;
+}
