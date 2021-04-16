@@ -14,7 +14,7 @@ const App = () =>{
     const [searchInput, setSearchInput] = useState('');
     const [editedTodo, setEditedTodo] = useState('');
     useEffect(() => {
-
+      setTodos(JSON.parse(localStorage.getItem('todo')));
     }, [])
     useEffect(() => {
       localStorage.setItem('todo', JSON.stringify(todos))
