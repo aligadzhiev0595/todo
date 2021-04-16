@@ -24,9 +24,10 @@ const App = () =>{
     <div className="app-container"> 
        <Header todos={todos}/>
       <Search status={status} setStatus={setStatus} setSearchInput={setSearchInput} />
-    {todos.length === 0 ? 
+    {todos ? todos.length === 0 ? 
     <div className='mb-3 mt-3 border p-3 text-center'>Здесь будет ваше расписание</div> : 
-    <Ul todos={todos} setTodos={setTodos} status={status} searchInput={searchInput} editedTodo={editedTodo} setEditedTodo={setEditedTodo}  />}     
+    <Ul todos={todos} setTodos={setTodos} status={status} searchInput={searchInput} editedTodo={editedTodo} setEditedTodo={setEditedTodo}  />
+   : setTodos([]) }     
   <Form setTodos={setTodos} todos={todos} setInputText={setInputText} inputText={inputText}/>
     </div>
         </div>

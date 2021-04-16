@@ -1,6 +1,6 @@
 import React from 'react';
 
-const header = ({todos}) => {
+const header = ({todos, setTodos}) => {
     const more = () => {
        return todos.filter((item) => item.isActive).length
     }
@@ -10,9 +10,9 @@ const header = ({todos}) => {
     return (
         <header>
         <h1 className="title">ToDoList</h1>
-    {todos.length === 0 ? '' : <div className="statusBar">
-        {more()} more to do, {done()} done
-    </div>}
+    {  
+     todos ? todos.length === 0 ? '' : <p className="statusBar">{more()} more to do, {done()} done </p> : setTodos([])
+    }
     </header>
     );
 };

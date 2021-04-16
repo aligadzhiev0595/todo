@@ -4,7 +4,8 @@ import Li from '../li';
 const ul = ({todos, setTodos, status, searchInput, editedTodo, setEditedTodo}) => {
     return (
         <ul className="ul">
-            {todos.filter((item) => {
+            {todos ? todos.length === 0 ? '' :
+            todos.filter((item) => {
                 switch (status) {
                         case 'active':{
                             return item.isActive;
@@ -19,7 +20,8 @@ const ul = ({todos, setTodos, status, searchInput, editedTodo, setEditedTodo}) =
                 }
             }).filter((item) => {
                 return item.todoName.includes(searchInput)
-            }).map((item, idx) =>{
+            })
+            .map((item, idx) =>{
                 return  <Li
                 idx={idx}
                  setTodos={setTodos}
@@ -30,10 +32,8 @@ const ul = ({todos, setTodos, status, searchInput, editedTodo, setEditedTodo}) =
                     editedTodo={editedTodo}
                     setEditedTodo={setEditedTodo}
                    />
-
-                
-            })}
-          
+            }) : setTodos([])
+        }
         </ul>
     );
 };
